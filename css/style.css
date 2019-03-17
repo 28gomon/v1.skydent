@@ -191,12 +191,17 @@ body a:hover {
   color: rgba(0, 113, 186, 0.85);
 }
 
+.navbar__social {
+  text-align: right;
+}
+
 .navbar__social a {
   color: rgba(38, 38, 38, 0.85);
   font-size: 20px;
-  display: block;
+  display: inline-block;
   -webkit-transition: color .25s ease-in-out;
   transition: color .25s ease-in-out;
+  padding-left: 10px;
 }
 
 .navbar__social a:hover {
