@@ -1,0 +1,28 @@
+body
+    +regular
+    color: $text-color
+    font-size: 16px
+    a 
+        text-decoration: none
+        color: $link-color
+        transition: all .25s ease-in-out
+        &:hover
+            text-decoration: none
+
+.clearfix
+    clear: both
+
+.button-a
+    a
+        background-color: $link-color
+        color: #ffffff
+        +semibold
+        padding: 15px 45px
+        font-size: 20px
+        text-decoration: none
+        box-shadow: 0 1px 12px rgba(0,0,0,0.42)
+        transition: all .25s ease-in-out
+        border: 2px solid rgba(#eaeaea, .45)
+        border-radius: 3px
+        &:hover
+            box-shadow: 0 1px 12px rgba(0,0,0,0.22)

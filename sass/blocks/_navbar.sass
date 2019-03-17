@@ -1,0 +1,157 @@
+.navbar
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    background-color: #ffffff
+    z-index: 200
+    box-shadow: 0 5px 5px rgba(#262626, .20)
+    border-radius: 0
+    &__wrap
+        display: flex
+        align-items: center
+        justify-content: space-between
+        min-height: 80px
+    &__logo
+        a 
+            img 
+                width: 130px
+    &__phone
+        margin-bottom: 5px
+        font-size: 20px
+        color: $link-color
+    &__menu-button
+        margin-right: 0
+    &__phone, &__landline
+        text-decoration: none
+        display: block
+        +semibold
+    &__location, &__email
+        display: block
+        text-align: right
+    &__email
+        a 
+            text-decoration: none
+            color: $text-color
+    &__location, &__work-time
+        opacity: .80
+    &__location-link
+        text-decoration: underline
+        transition: all .25s ease-in-out
+        color: rgba($link-color, 1)
+        &:hover
+            text-decoration: none
+            color: rgba($link-color, .85)
+    &__social
+        a 
+            color: rgba($text-color, .85)
+            font-size: 20px
+            display: block
+            transition: color .25s ease-in-out
+            &:hover
+                color: rgba($link-color, .85)
+
+.menu
+    position: fixed
+    top: 100px
+    left: 0
+    padding: 20px 0
+    width: 100%
+    background-color: $link-color
+    z-index: 2
+    transition: all .25s ease-in-out
+    transform: translateY(-100%)
+    opacity: 0
+    &_active
+        transform: translateY(0)
+        opacity: 1
+    &__nav-ul
+        display: flex
+        align-items: center
+        justify-content: space-around
+        margin-bottom: 0
+        li 
+            list-style: none
+    &__link
+        position: relative
+        text-transform: uppercase
+        font-size: 17px
+        text-decoration: none
+        color: #ffffff
+        padding-bottom: 25px
+        
+    &__list-offer 
+        position: absolute
+        top: 180%
+        z-index: 101
+        padding-left: 0
+        background-color: $link-color
+        min-width: 200px
+        padding-top: 10px
+        padding-bottom: 10px
+        transition: all .25s ease-in-out
+        opacity: 0
+        display: none
+        li 
+            display: block
+            padding-left: 0
+            transition: all .25s ease-in-out
+            a 
+                color: #ffffff
+                display: block 
+                padding: 5px 15px 10px 15px
+                font-size: 20px
+                &:hover
+                    color: #23527c
+    &__nav-ul-li
+        &:hover
+            .menu__list-offer
+                opacity: 1
+                top: 180%
+                display: block
+    &-button 
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        background-color: transparent
+        border: none
+        border-right: 2px solid rgba(#0071ba, 0.1)
+        border-left: 2px solid rgba(#0071ba, 0.1)
+        height: 100px
+        width: 70px
+        &__line
+            display: block
+            width: 20px 
+            height: 2px
+            background-color: #0071ba
+            margin: 2px 0
+        &:focus, &:active
+            outline: none
+
+@media only screen and (max-width: 960px)
+
+    .navbar
+        &__mobile, &__landline
+            display: none
+        &__social
+            a 
+                display: inline-block
+                padding: 0 5px
+
+@media only screen and (max-width: 768px)
+
+    .menu
+        &__nav-ul
+            flex-direction: column
+        &__link
+            margin-bottom: 15px
+            +semibold
+
+@media only screen and (max-width: 480px)
+
+    .navbar
+        &__logo
+            a 
+                img 
+                    width: 100px

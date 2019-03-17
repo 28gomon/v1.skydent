@@ -1,0 +1,61 @@
+.offer
+    background-color: #f1f1f1
+    padding-bottom: 50px
+    width: 100%
+    margin-bottom: 50px
+    &__block
+        background-color: #ffffff//$link-color
+        padding: 0
+        margin-top: -150px
+        position: relative
+        padding-bottom: 15px
+        box-shadow: 0 4px 20px rgba($text-color, .25)
+    &__header-title
+        text-align: center
+        padding: 50px
+    &__title
+        font-size: 30px
+        color: $text-color//#ffffff
+        line-height: 0
+    &__group
+        text-align: center
+        width: 100%
+        transition: all .25s ease-in-out
+        img, h3
+            transition: all .25s ease-in-out
+        a 
+            transition: all .25s ease-in-out
+            &:hover
+                background-color: rgba(#ffffff, .42)
+                h3, img
+                    opacity: .75
+    &__group-link
+        width: 230px
+        vertical-align: top
+        display: inline-block
+        text-decoration: none
+    &__item
+        text-align: center
+        padding: 20px 0
+        fill: #ffffff
+        img 
+            width: 30%
+            margin: auto
+    &__item-title
+        color: $text-color
+        text-decoration: none
+        +light
+        padding: 0 10px
+
+
+@media only screen and (max-width: 768px)
+
+    .offer
+        &__group-link
+            width: 300px
+
+@media only screen and (max-width: 480px)
+
+    .offer
+        &__group-link
+            width: 250px

@@ -1,0 +1,73 @@
+.news
+    position: relative
+    width: 100%
+    padding-bottom: 50px
+    &__hidden-title
+        position: absolute
+        top: -80px
+        left: 5%
+        z-index: -1
+        font-size: 200px
+        +semibold
+        opacity: .1
+    &__header-block
+        position: relative
+        width: 100%
+        margin-bottom: 30px
+        &>div
+            width: 49.3333%
+            display: inline-block
+    &__title-block
+        position: relative
+    &__link-all-news
+        position: relative
+        text-align: right
+        +semibold
+    &__item
+        width: 100%
+        vertical-align: top 
+        display: inline-block
+        padding: 0 0
+    &__link-item
+        padding: 0
+        display: block
+        &:hover
+            .news__item-title
+                opacity: .75
+            .news__item-detail
+                opacity: .75
+    &__item-title
+        font-size: 20px
+        color: $text-color
+        margin-top: 0
+        +semibold
+        transition: all .25s ease-in-out
+    &__item-detail
+        font-size: 16px
+        color: $text-color
+        transition: all .25s ease-in-out
+    &__item-read-news
+        +semibold
+        font-size: 20px
+    &__item-add-date
+        text-align: right
+        color: $text-color
+        opacity: .75
+
+@media only screen and (max-width: 960px)
+
+    .news
+        &__hidden-title
+            top: -50px
+            left: 10%
+            font-size: 120px
+
+@media only screen and (max-width: 768px)
+
+    .news
+        &__hidden-title
+            top: -50px
+            left: 10%
+            font-size: 10px
+            opacity: 0
+
